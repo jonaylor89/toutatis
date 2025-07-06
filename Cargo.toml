@@ -1,0 +1,30 @@
+[package]
+name = "toutatis"
+version = "0.1.0"
+edition = "2024"
+authors = ["Johannes Naylor <jonaylor89@gmail.com>"]
+description = "A comprehensive OSINT tool for gathering and analyzing publicly available information"
+license = "GPL-3.0"
+repository = "https://github.com/jonaylor89/toutatis"
+homepage = "https://github.com/jonaylor89/toutatis"
+documentation = "https://docs.rs/toutatis"
+readme = "README.md"
+keywords = ["osint", "cli", "investigation", "security", "reconnaissance"]
+categories = ["command-line-utilities", "web-programming"]
+exclude = ["tests/", "examples/"]
+
+[dependencies]
+clap = { version = "4.5.40", features = ["derive"] }
+color-eyre = "0.6.5"
+iso3166-1 = "1.0.1"
+phonenumber = "0.3.7"
+reqwest = { version = "0.12.22", features = ["json", "cookies"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+tokio = { version = "1.46.1", features = ["full"] }
+url = "2.5.4"
+
+[dev-dependencies]
+assert_cmd = "2.0.17"
+mockito = "1.7.0"
+predicates = "3.1.3"
